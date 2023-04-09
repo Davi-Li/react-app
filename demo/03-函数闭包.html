@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 函数闭包：当内层函数访问外层函数的变量，就会发生闭包
+      // 1. 普通函数的调用
+      // function outer() {
+      //   let num = 10
+      //   console.log(num)
+      // }
+      // outer()
+
+      // 闭包
+      function outer() {
+        let num = 10
+        return function inner() {
+          num++
+          console.log(num)
+        }
+      }
+      // 正常来说，函数调用之后，就会弹栈，，，内存就会销毁
+      // 如果产生了闭包，这块内存空间就不会释放
+      // 如何释放闭包的空间？？？
+      let fn = outer()
+      fn()
+      fn()
+      fn()
+
+      fn = outer()
+      fn1() // 打印多少?  剩下几个闭包？
+    </script>
+  </body>
+</html>

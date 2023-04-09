@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>1234</div>
+    <div>1234</div>
+    <div>1234</div>
+    <div>1234</div>
+    <div>1234</div>
+    <div>1234</div>
+    <div>1234</div>
+    <script>
+      // 1. 找到所有的div标签
+      // 2. 将所有的div的高度设置为100px，宽度设置为100px，添加红色边框
+      function fn() {
+        let divs = document.querySelectorAll('div')
+        divs.forEach(function (item) {
+          item.style.height = '100px'
+          item.style.width = '100px'
+          item.style.border = '2px solid red'
+        })
+      }
+    </script>
+  </body>
+</html>

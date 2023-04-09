@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>abcdabcd</div>
+    <script>
+      // var str = 'abcddcbaABCD'
+      // // 让str中的b部分高亮,忽略大小写
+      // var reg = /b/gi
+      // var res = str.replace(reg, '<span style="color:red">$&</span>')
+      // console.log(res)
+
+      // 封装一个函数,让str中的target部分高亮，忽略大小写
+      function highlight(str, target) {
+        var reg = new RegExp(target, 'gi')
+        return str.replace(reg, '<span style="color:red">$&</span>')
+      }
+      console.log(highlight('abcdabcd', 'b'))
+    </script>
+  </body>
+</html>
